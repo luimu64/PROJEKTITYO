@@ -1,8 +1,10 @@
-// GAME.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
 #include <windows.h>
+#include <iostream>
+#include <string>
+#include <tchar.h>
+#include <clocale>
+
+
 using namespace std;
 
 char pelaaja;
@@ -17,33 +19,33 @@ void clearcmd() {
 }
 
 void room1() {
-	cout << "You walk out of the room and see two different paths. \nOne to the right and one to the left. \nWhich one do you choose?\n";
+	cout << "Kävelet ulos huoneesta ja näet kaksi reittiä. \nYksi oikealle ja yksi vasemmalle. \nKumpaan suuntaan menet?\n";
 	cout << "##########################################################################" << endl;
-	cout << "left [z] right [x] search for something else [c]\n";
+	cout << "vasemmalle [z] oikealle [x] katsele vielä ympärillesi [c]\n";
 	cin >> pelaaja;
 	clearcmd();
 	cout << "##########################################################################" << endl;
 	switch (pelaaja) {
 	case 'z':
-		cout << "You can see a deadly chasm in front \nof you which looks possible to \njump over but is risky.\n";
+		cout << "Näet syvän kuilun edessäsi, \njoka vaikuttaa mahdolliselta hypätä yli, \nmutta vaaralliselta.\n";
 		valinta = 1;
 		break;
 	case 'x':
-		cout << "You can see a room with 2 keys in the middle \nof it, sign that says \"take only one\" and a exit.\n";
+		cout << "Näet huoneen jonka keskellä on kaksi avainta, \nkyltti joka sanoo\"ota vain yksi\" ja uloskäynti.\n";
 		valinta = 2;
 		break;
 	case 'c':
-		cout << "You search the area closely and find a secret \nlever which opens a secrect room. Inside \nthe secrect room is plank.\n";
+		cout << "Katselet ympärillesi ja huomaat \nvivun joka avaa salaisen huoneen. \nHuoneen keskellä on lauta.\n";
 		valinta = 3;
 	}
 	if (valinta == 1 && secret == false) {
 		cout << "##########################################################################" << endl;
-		cout << "jump over [z] go back [x]\n";
+		cout << "hyppää yli [z] mene takaisin [x]\n";
 		cin >> pelaaja;
 		clearcmd();
 		cout << "##########################################################################" << endl;
 		if (pelaaja == 'z') {
-			cout << "You jumped over succesfully but hurt \nyour ankle because you underestimated \nthe height of the jump.\n";
+			cout << "Hyppäsit kuilun yli onnistuneesti, mutta \nsatutit jalkasi koska aliarvioit \nhypyn korkeuden.\n";
 			cout << "##########################################################################" << endl;
 		}
 		else {
@@ -53,16 +55,16 @@ void room1() {
 	}
 	if (valinta == 1 && secret == true) {
 		cout << "##########################################################################" << endl;
-		cout << "jump over [z] go back [x] use plank [c]\n";
+		cout << "hyppää yli [z] mene takaisin [x] käytä lautaa ylitykseen [c]\n";
 		cin >> pelaaja;
 		clearcmd();
 		cout << "##########################################################################" << endl;
 		if (pelaaja == 'z') {
-			cout << "You jumped over succesfully but hurt \nyour ankle because you underestimated \nthe height of the jump.";
+			cout << "Hyppäsit kuilun yli onnistuneesti, mutta \nsatutit jalkasi koska aliarvioit \nhypyn korkeuden.";
 			cout << "##########################################################################" << endl;
 		}
 		else if (pelaaja == 'c') {
-			cout << "You used the earlier accuired plank to cross the chasm safely.\n";
+			cout << "Käytit aikaisemmin löytänyttä lankkua kuilun ylitykseen.\n";
 			cout << "##########################################################################" << endl;
 			secret = false;
 		}
@@ -73,16 +75,16 @@ void room1() {
 	}
 	if (valinta == 2) {
 		cout << "##########################################################################" << endl;
-		cout << "take one and open the door [z] take both and open the door [x] go back [c]\n";
+		cout << "ota yksi ja avaa ovi [z] ota molemmat ja avaa ovi [x] mene takaisin [c]\n";
 		cin >> pelaaja;
 		clearcmd();
 		cout << "##########################################################################" << endl;
 		if (pelaaja == 'z') {
-			cout << "You took one key and opened the door succesfully\n";
+			cout << "Otit yhden avaimen ja avasit oven.\n";
 			cout << "##########################################################################" << endl;
 		}
 		else if (pelaaja == 'x') {
-			cout << "You took both of the keys and opened the door succesfully.\n";
+			cout << "Otit molemmat avaimet ja avasit oven.\n";
 			cout << "##########################################################################" << endl;
 		}
 		else {
@@ -92,12 +94,12 @@ void room1() {
 	}
 	if (valinta == 3) {
 		cout << "##########################################################################" << endl;
-		cout << "take the plank with you and go back [z] go back without it [x]\n";
+		cout << "ota lankku mukaan ja mene takaisin [z] mene takaisin ilman sitä [x]\n";
 		cin >> pelaaja;
 		clearcmd();
 		cout << "##########################################################################" << endl;
 		if (pelaaja == 'z') {
-			cout << "You take the plank with you and\n";
+			cout << "Otat lankun mukaasi ja\n";
 			secret = true;
 			valinta = 0;
 			room1();
@@ -110,8 +112,10 @@ void room1() {
 }
 int main()
 {
+	setlocale(LC_ALL, "fi-FI");
+	SetConsoleTitle(_T("DEMO"));
 	clearcmd();
 	cout << "##########################################################################" << endl;
-	cout << "You wake up in a empty room with one exit.\n";
+	cout << "Heräät tyhjästä huoneesta jossa on yksi uloskäynti.\n";
 	room1();
 }
