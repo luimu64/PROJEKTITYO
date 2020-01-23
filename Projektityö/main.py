@@ -16,7 +16,7 @@ def animoija(s):
     for a in s:
         sys.stdout.write(a)
         sys.stdout.flush()
-        time.sleep(0.07)
+        time.sleep(delay)
         if keyboard.is_pressed('space'):
             refreshi()
             print(s)
@@ -43,15 +43,15 @@ print("""
     / $$   |/     $$/ $$       |$$ | $$  |$$    $$ |$$ |/  |$$       |/$$/ $$  |$$       |
     $$$$$$/ $$$$$$$/   $$$$$$$/ $$/   $$/  $$$$$$$/ $$/ $$/  $$$$$$$/ $$/   $$/  $$$$$$$/ 
 
-    \u2588\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580
-    \u258C  Kontrollit:
-    \u258C  1, 2, 3     =   vaihtoehtojen valitsemis 
-    \u258C                  näppäimet jos ei muuta sanota
-    \u258C  välilyönti  =   skippaa tekstin loppuun
-    \u258C  pohjassa
-    \u2588     
+    \u2588\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2588
+    \u258C  Kontrollit:                                                                       \u2590
+    \u258C  1, 2, 3...  =   vaihtoehtojen valitsemis-                                         \u2590
+    \u258C                  näppäimet jos ei toisin sanota                                    \u2590
+    \u258C  välilyönti  =   skippaa tekstin loppuun                                           \u2590
+    \u258C  pohjassa                                                                          \u2590
+    \u2588\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2588
 """)
-time.sleep(5)
+delay = float(input("    Anna tekstin nopeus, 0.5 - 0 (0.05 suositeltava):\n\u2002\u2002\u2002\u2002\u2591"))
 animoija(t1)
 kysymys = input("""
     1. vaihtoehto
@@ -60,9 +60,7 @@ kysymys = input("""
     2. vaihtoehto
     Lähde etsimään ruokaa luonnosta.\n
     3. vaihtoehto
-    Seuraa joen viereistä polkua toivoes löytäväsi siviilisaatiota.\n   
-
-""")
+    Seuraa joen viereistä polkua toivoen löytäväsi siviilisaatiota.\n\u2002\u2002\u2002\u2002\u2591""")
 kysymys = kysymys.replace(" ", "")
 if kysymys == "1":
     t1_1 = """
