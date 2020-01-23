@@ -2,9 +2,9 @@ import time
 import sys
 import keyboard
 
-t1 = """
+intro = """
     Pimeänä ja kosteana tammikuun perjantai iltana olet menossa 
-    ostamaan kaljaa k-marketista rankan amis päivän jälkeen. Matkalla 
+    ostamaan kaljaa k-marketista rankan amispäivän jälkeen. Matkalla 
     kuitenkin virolainen raksamies ajaa kännissä päältäsi saabilla. 
     Heräät aamulla joesta mutta tuntuu että jotain on pielessä. 
     Vesi on liian lämmintä ja on liian kirkasta ollakseen tammikuu
@@ -52,7 +52,7 @@ print("""
     \u2588\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2588
 """)
 delay = float(input("    Anna tekstin nopeus, 0.5 - 0 (0.05 suositeltava):\n\u2002\u2002\u2002\u2002\u2591"))
-animoija(t1)
+animoija(intro)
 kysymys = input("""
     1. vaihtoehto
     Jää ojaan kalastamaan. Sinulla ei ole onkea mutta kyllähän 
@@ -72,4 +72,16 @@ if kysymys == "1":
     Hän kertoo nimekseen Nita ja 
     """
     animoija(t1_1)
+elif kysymys == "2":
+    t1_2 = """
+    Lähdet tutkimaan läheistä metsää löytämättä mitään muuta kuin 
+    tuntemattomia sieniä joita et uskalla syödä. Ihmeen kaupalla 
+    löydät puskan vierestä kimpaleen grillattua lihaa ja kun menet 
+    lähelle, "WHOOSH" lennähdät ilmaan ja jäät roikkumaan puustä 
+    köyden varassa. Lihan ympärillä oli simppeli silmukka jota et 
+    huomannut. Seuraavana aamuna setämiehen näköinen mies joka ei 
+    näytä tyytyväiseltä napattuun riistaan vie sinut pienen kylän 
+    kirkkoon jalkapuuhun.
+    """
+    animoija(t1_2)
 time.sleep(5)
