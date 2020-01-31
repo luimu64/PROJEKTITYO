@@ -77,11 +77,29 @@ elif kysymys == "2":
     Lähdet tutkimaan läheistä metsää löytämättä mitään muuta kuin 
     tuntemattomia sieniä joita et uskalla syödä. Ihmeen kaupalla 
     löydät puskan vierestä kimpaleen grillattua lihaa ja kun menet 
-    lähelle, "WHOOSH" lennähdät ilmaan ja jäät roikkumaan puustä 
-    köyden varassa. Lihan ympärillä oli simppeli silmukka jota et 
-    huomannut. Seuraavana aamuna setämiehen näköinen mies joka ei 
-    näytä tyytyväiseltä napattuun riistaan vie sinut pienen kylän 
-    kirkkoon jalkapuuhun.
+    lähelle, huomaat lihanpalan puun alla ja jäät ansaan. 
+    Seuraavana aamuna setämiehen näköinen mies joka ei näytä 
+    tyytyväiseltä napattuun riistaan vie sinut pienen kylän 
+    kirkkoon jalkapuuhun. Heräät tuntemattomassa huoneesa sängyltä 
+    ja huomaat että sinua tarkkaillaan. Huomaat nuorehkon tytön 
+    sängyn vieressä. Hän kertoo nimekseen Nita ja ja kysyy miksi 
+    olit jalkapuussa. Vastaat "En tiedä, jäin ansaaan ja menetin 
+    tajuntani". Hän vaikuttaa huojentuneelta että et ole rikollinen 
+    ja tarjoaa sienisoppaa syötäväksi.
     """
     animoija(t1_2)
+elif kysymys == "3":
+    t1_3 = """
+    Matkaat polkua pitkin kunnes päädyt pieneen kylään. Kylässä on 
+    muutamien pienien puutalojen lisäksi kivikirkolta näyttävä rakennus.
+    Päätät käydä mennä katsomaan toivoen saavasi jotain syötävää. 
+    Päästyäsi kirkolle sinua vastaan tulee pappi joka kutsuu sinut 
+    sisälle ja kertoo kyseisen maailman jumalasta. Heidän jumalansa 
+    kuulemma on antanut monille ennennäkemättömiä 「STAND」 kykyjä.
+    Menet jumalanpalvelukseen, yhtäkkiä näkösi pimentyyy ja menetät 
+    tajuntasi. Heräät tuntemattomassa huoneesa sängyltä ja huomaat että 
+    sinua tarkkaillaan. Huomaat nuorehkon tytön sängyn vieressä. Hän kertoo 
+    nimekseen Nita ja tarjoaa sienisoppaa syötäväksi.
+    """
+    animoija(t1_3)
 time.sleep(5)
