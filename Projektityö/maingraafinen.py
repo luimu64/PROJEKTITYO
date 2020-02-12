@@ -1,9 +1,10 @@
-from tkinter import Tk, Frame, Label, Button
+from tkinter import Tk, Frame, Label, Button, Toplevel, LabelFrame
 from PIL import Image, ImageTk
 import os
 
 root = Tk()
 root.title("Isekai.py")
+
 ulkofraami = Frame(root, pady=5)
 ulkofraami.grid(row=0,column=0,columnspan=3)
 nappifraami = Frame(ulkofraami, padx=50, pady=5)
@@ -14,6 +15,22 @@ tekstinro = 0
 valintanro = 0
 i = 0
 vastattu = 0
+
+def tietoja():
+    tietoja = Toplevel()
+    tietoja.geometry("800x400")
+    tietoja.title("Infoa")
+    nappibox = LabelFrame(tietoja, text="Aiheet", padx=10)
+    nappibox.grid(row=0, column=0)
+    tekstibox = LabelFrame(tietoja, text="Sisältö", padx=10)
+    tekstibox.grid(row=0, column=1)
+    tieto1 = Button(nappibox, text="Uuden maailman uskonto", padx=10)
+    tieto1.grid(row=0, column=0)
+    tieto2 = Button(nappibox, text="Nita", padx=76)
+    tieto2.grid(row=1, column=0)
+    tietojal = Label(tekstibox, text="Paina nappeja katsoaksesi informaatiota", padx=10, pady=10)
+    tietojal.pack()
+
 
 def update():
     global tekstinro
@@ -98,7 +115,7 @@ valinta3l = [t1_3, t1_31, "loppu", "seuraava valinta teksti 3"]
 
 seuraava = Button(nappifraami, text="Seuraava", padx=10, command=update)
 seuraava.grid(row=0, column=0)
-stats = Button(nappifraami, text="Tiedot", padx=10)
+stats = Button(nappifraami, text="Tiedot", padx=10, command=tietoja)
 stats.grid(row=0, column=1)
 valinta1 = Button(nappifraami, text="valinta 1", padx=10, command=valinta1)
 valinta1.grid(row=0, column=2)
