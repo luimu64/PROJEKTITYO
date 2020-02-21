@@ -47,9 +47,25 @@ Päätätte jakautua kahteen ryhmään toinen joka sukeltaa koloon dynamiitin ka
 [Valinta]
 1. Mene koloon sukeltavan ryhmän kanssa
 2. Jää turvaamaan kolon suuta 
-3. Koita karata tilanteesta metsään
-[1]
+3. Koeta karata tilanteesta metsään
+[1] Otat mukaan dynamiitiä eddessäsi luolaan menee kaksi kylän miestä toisella kädessään kirves ja toisella soihtu. Luolassa on kosteaa ja haisee mädältä. päästyänne luolan syvinpiin syvyyksiin 
+löydätte kasoittain kultaa, eläimien jäännöksiä ja ISON nukkuvan örkin yli kaksi metriä korkea ja näyttää siltä että saattaisi mennä herättyään egyptiin hakkaamaan kaksisataa vuotta vanhan englantilais vamppyyrin
+ eli toisin sanottuna sitä ei pitäisi herättää. Onneksi se on syvässä unessa ja saatte herättämättä örkkiä asetettua dynamiitit paikoilleen jolloin ne räjähdyttyään tukkisivat tunnelin kokonaan kivillä. Olette asettaneet
+ kaikki dynamiitit pitkään sytytyslankaan jonka voitte sytyttää turvallisesti luolan suulta. Lähteässänne hiljaa uloskäyntiä päin mies kirveen kanssa kompastuu lepakkosoppakulhoon joka herättää örkin.
+Se nousee raivoissaan ylös ja salaman nopeasti juoksee soihtumiehen luokse jonka se läpsäyttää sinun viereiseen seinää päin kuin kärpäsen. Sinulla on nyt dileema 
+[Valinta]
+[1.1] Lähde juoksemaan luolan suuta kohti sytytyslangan kanssa.
+[1.2] Räjäytä dynamiitti nyt soihdulla koittaen tappaa örkkiä ja sulkien luolan.
+[1.1]
+Juokset luolassa henkesi edestä kunnes tunnet jonkun nappaavan sinua selästä ja paiskaavan seinää päin ja alat menettää tuntosi ja näön kunnes ei enään ole mitään 
+[KUOLEMA]
+[1.2]
+Nappaat soihdun maasta ja sytytät sytytyslangat joka räjäyttää dynamiitit ennen kuin örkki näkee sinua. Kovan pamahduksen jälkeen näet kun örkki jää kivien alle jonka jälkeen
+koet saman kohtalon
+[KUOLEMA]
 [2]
+Jäät luolan suulle miekka kädessä odottaen kylän miehiä jotka menivät luolaan dynamiitin kanssa. Luolan suulla odottelet mikä tunttuu liian pitkältä ajalta ja kuulet luolasta kovan kolauksen ja
+ huudon jonka jälkeen luolasta juoksee ulos jääkaapin kokoinen örkki   
 [3]
 
 
