@@ -1,6 +1,11 @@
 from tkinter import Tk, Frame, Label, Button, Toplevel, LabelFrame
 from PIL import Image, ImageTk
 import os
+import pygame
+
+pygame.mixer.init()
+pygame.mixer.music.load("resurssit/bg.ogg")
+pygame.mixer.music.play(-1) 
 
 root = Tk()
 root.title("Isekai.py")
@@ -114,9 +119,9 @@ t1_22 = "Vastaat \"En tiedä, jäin ansaaan ja menetin tajuntani\". \nHän vaiku
 t1_3 = "Matkaat polkua pitkin kunnes päädyt pieneen kylään. Kylässä on pieniä kivitaloja ja rakennus joka näyttää kirkolta.\n Päätät mennä katsooman jos kirkolta saisi jotain syötävää. Siellä tapaat papilta vaikuttavan henkilön \njoka kertoo alueen uskonnosta [lisätietoa uskonnosta \"Tiedot\" napista]."
 t1_31 = "Päätät kuunneella mitä hänellä on sanottavaa ja päädyt johonkin kummalliseen rituaaliin. \nJossain vaiheessa rituaalia sinua alkaa yhtäkkiä nukuttamaan ja nukahdat. Heräät sängyltä ja huomaat että sinua \ntarkkaillaan. Tarkkailija on nuori tyttö joka kertoo nimekseen Nita. Kerrot olevasi nälkäinen ja hän tarjoaa sienisoppaa."
 
-kuva_joki = ImageTk.PhotoImage(Image.open("/home/luimu/PROJEKTITYO/Projektityö/kuvat/joki.jpg"))
-kuva_kmarket = ImageTk.PhotoImage(Image.open("/home/luimu/PROJEKTITYO/Projektityö/kuvat/Kmarket.jpg"))
-kuva_kuva2 = ImageTk.PhotoImage(Image.open("/home/luimu/PROJEKTITYO/Projektityö/kuvat/kuva2.png"))
+kuva_joki = ImageTk.PhotoImage(Image.open("/home/luimu/PROJEKTITYO/Projektityö/resurssit/joki.jpg"))
+kuva_kmarket = ImageTk.PhotoImage(Image.open("/home/luimu/PROJEKTITYO/Projektityö/resurssit/Kmarket.jpg"))
+kuva_kuva2 = ImageTk.PhotoImage(Image.open("/home/luimu/PROJEKTITYO/Projektityö/resurssit/kuva2.png"))
 
 kuvalista = [kuva_joki, kuva_kmarket, kuva_kuva2]
 
