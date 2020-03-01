@@ -3,8 +3,9 @@ from PIL import Image, ImageTk
 import os
 import pygame
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
 pygame.mixer.init()
-pygame.mixer.music.load("resurssit/bg.ogg")
+pygame.mixer.music.load(str(dir_path) + "\\resurssit\\bg.ogg")
 pygame.mixer.music.play(-1) 
 
 root = Tk()
@@ -31,11 +32,11 @@ def tietoja():
     nappibox.grid(row=0, column=0)
     tekstibox = LabelFrame(tietoja, text="Sisältö", padx=10)
     tekstibox.grid(row=0, column=1)
-    tieto1 = Button(nappibox, text="Uuden maailman uskonto", padx=10)
+    tieto1 = Button(nappibox, text="Uuden maailman uskonto", padx=10, font=("Roboto", "14"))
     tieto1.grid(row=0, column=0)
-    tieto2 = Button(nappibox, text="Nita", padx=76)
+    tieto2 = Button(nappibox, text="Nita", padx=76, font=("Roboto", "14"))
     tieto2.grid(row=1, column=0)
-    tietojal = Label(tekstibox, text="Paina nappeja katsoaksesi informaatiota", padx=10, pady=10)
+    tietojal = Label(tekstibox, text="Paina nappeja katsoaksesi informaatiota", padx=10, pady=10, font=("Roboto", "14"))
     tietojal.pack()
 
 
@@ -119,35 +120,48 @@ t1_22 = "Vastaat \"En tiedä, jäin ansaaan ja menetin tajuntani\". \nHän vaiku
 t1_3 = "Matkaat polkua pitkin kunnes päädyt pieneen kylään. Kylässä on pieniä kivitaloja ja rakennus joka näyttää kirkolta.\n Päätät mennä katsooman jos kirkolta saisi jotain syötävää. Siellä tapaat papilta vaikuttavan henkilön \njoka kertoo alueen uskonnosta [lisätietoa uskonnosta \"Tiedot\" napista]."
 t1_31 = "Päätät kuunneella mitä hänellä on sanottavaa ja päädyt johonkin kummalliseen rituaaliin. \nJossain vaiheessa rituaalia sinua alkaa yhtäkkiä nukuttamaan ja nukahdat. Heräät sängyltä ja huomaat että sinua \ntarkkaillaan. Tarkkailija on nuori tyttö joka kertoo nimekseen Nita. Kerrot olevasi nälkäinen ja hän tarjoaa sienisoppaa."
 
-kuva_joki = ImageTk.PhotoImage(Image.open("/home/luimu/PROJEKTITYO/Projektityö/resurssit/joki.jpg"))
-kuva_kmarket = ImageTk.PhotoImage(Image.open("/home/luimu/PROJEKTITYO/Projektityö/resurssit/Kmarket.jpg"))
-kuva_kuva2 = ImageTk.PhotoImage(Image.open("/home/luimu/PROJEKTITYO/Projektityö/resurssit/kuva2.png"))
+t2 = "Kuulet Nitalta paikallisesta örkki-ongelmasta. Örkit ovat ryöstäneet kaiken kullan mitä löytävät joka on epätavallistä\n käytöstä örkeille sillä örkit ovat liian tyhmiä ymmärtääkseen kullan arvoa. Kylän kykenevien olisi illalla suunnitelma\n käydä tuhoamassa eräs läheinen luola jonka uskotaan olevan örkkejen pesä. "
+t21 = "Sinua kutsutaan mukaan operaatioon palkan luvassa.Saat illan tullen miekan kylän rautamieheltä puolustaksesi itseäsi\n vaikka örkkejä ei kuuluisi olla koloissansa öisin. Lähdet koloa kohti ryhmän mukana. Päästyänne kolon suulle kuulette ääniä kolosta. \nPäätätte jakautua kahteen ryhmään toinen joka sukeltaa koloon dynamiitin kanssa "
+t22 = "jättää sen sinne ja tulee takaisin ja toinen joka estää örkkien paluun luolaan ja varmistaa pakoreitin.\n\n"
 
-kuvalista = [kuva_joki, kuva_kmarket, kuva_kuva2]
+kysymys2 = "1. Vaihtoehto: Mene koloon sukeltavan ryhmän kanssa\n 2. Vaihtoehto: Jää turvaamaan kolon suuta \n3. Vaihtoehto: Koeta karata tilanteesta metsään"
+
+t2_1 =  "Otat mukaan dynamiitiä eddessäsi luolaan menee kaksi kylän miestä toisella kädessään kirves ja toisella soihtu.\n Luolassa on kosteaa ja haisee mädältä. päästyänne luolan syvinpiin syvyyksiin löydätte kasoittain kultaa,\n eläimien jäännöksiä ja ISON nukkuvan örkin yli kaksi metriä korkea ja näyttää siltä että saattaisi mennä herättyään"
+t2_12 = "egyptiin hakkaamaan kaksisataa vuotta vanhan englantilais vamppyyrin eli toisin sanottuna sitä ei pitäisi herättää.\n Onneksi se on syvässä unessa ja saatte herättämättä örkkiä asetettua dynamiitit paikoilleen jolloin\n ne räjähdyttyään tukkisivat tunnelin kokonaan kivillä. Asetatte kaikki dynamiitit pitkään sytytyslankaan jonka voitte\n"
+t2_13 = "sytyttää turvallisesti luolan suulta. Lähteässänne hiljaa uloskäyntiä päin mies kirveen kanssa kompastuu lepakkosoppakulhoon\n joka herättää örkin. Se nousee raivoissaan ylös ja salaman nopeasti juoksee soihtumiehen luokse jonka se läpsäyttää sinun viereiseen seinää päin kuin kärpäsen. Sinulla on nyt dileema\n"
+
+kuva_kmarket = ImageTk.PhotoImage(Image.open(str(dir_path) + "\\resurssit\\K-Market.jpg"))
+kuva_kirkko = ImageTk.PhotoImage(Image.open(str(dir_path) + "\\resurssit\\kirkko.jpg"))
+kuva_kylantalo = ImageTk.PhotoImage(Image.open(str(dir_path) + "\\resurssit\\kylantalo.jpg"))
+kuva_luola = ImageTk.PhotoImage(Image.open(str(dir_path) + "\\resurssit\\toinenluola.jpg"))
+kuva_kala = ImageTk.PhotoImage(Image.open(str(dir_path) + "\\resurssit\\kala.jpg"))
+kuva_metsa = ImageTk.PhotoImage(Image.open(str(dir_path) + "\\resurssit\\pimeametsa.jpg"))
+
+kuvalista = [kuva_kmarket, kuva_kirkko, kuva_kylantalo, kuva_luola, kuva_metsa, kuva_kala]
 
 
 kuval = Label(ulkofraami, image=kuvalista[0])
 kuval.grid(row=0,column=0)
 
-teksti = Label(tekstifraami, text=intro, bd=12)
+teksti = Label(tekstifraami, text=intro, bd=12, font=("Roboto", "14"))
 teksti.grid(row=0, column=0)
 
 tekstilista = [" "]
-tekstilista = [intro, kysymys1, "teksti 3", "kysymys 2"]
+tekstilista = [intro, kysymys1, t2, t21, t22, kysymys2]
 
-valinta1l = ["kuva1", t1_1, t1_12, t1_13, t1_14, "loppu", "2_1", "2_2","loppu"]
-valinta2l = [t1_2, t1_21, t1_22, " ", "loppu", "seuraava valinta teksti 2"]
-valinta3l = [t1_3, t1_31, " ", " ", "loppu", "seuraava valinta teksti 3"]
+valinta1l = ["kuva1", t1_1, t1_12, t1_13, t1_14, "loppu", t2_1, t2_12,"loppu"]
+valinta2l = ["kuva1", t1_2, t1_21, t1_22, " ", "loppu", "seuraava valinta teksti 2"]
+valinta3l = ["kuva1", t1_3, t1_31, " ", " ", "loppu", "seuraava valinta teksti 3"]
 
-seuraava = Button(nappifraami, text="Seuraava", padx=10, command=update)
+seuraava = Button(nappifraami, text="Seuraava", padx=10, command=update, font=("Roboto", "14"))
 seuraava.grid(row=0, column=0)
-stats = Button(nappifraami, text="Tiedot", padx=10, command=tietoja)
+stats = Button(nappifraami, text="Tiedot", padx=10, command=tietoja, font=("Roboto", "14"))
 stats.grid(row=0, column=1)
-valinta1 = Button(nappifraami, text="valinta 1", padx=10, command=valinta1)
+valinta1 = Button(nappifraami, text="valinta 1", padx=10, command=valinta1, font=("Roboto", "14"))
 valinta1.grid(row=0, column=2)
-valinta2 = Button(nappifraami, text="valinta 2", padx=10, command=valinta2)
+valinta2 = Button(nappifraami, text="valinta 2", padx=10, command=valinta2, font=("Roboto", "14"))
 valinta2.grid(row=0, column=3)
-valinta3 = Button(nappifraami, text="valinta 3", padx=10, command=valinta3)
+valinta3 = Button(nappifraami, text="valinta 3", padx=10, command=valinta3, font=("Roboto", "14"))
 valinta3.grid(row=0, column=4)
 
 root.mainloop()
