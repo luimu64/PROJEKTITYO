@@ -23,7 +23,6 @@ kuvanro = 0
 i = 0
 vastattu = 0
 
-
 def tietoja():
     tietoja = Toplevel()
     tietoja.geometry("800x400")
@@ -36,6 +35,8 @@ def tietoja():
     tieto1.grid(row=0, column=0)
     tieto2 = Button(nappibox, text="Nita", padx=76, font=("Roboto", "14"))
     tieto2.grid(row=1, column=0)
+    tieto2 = Button(nappibox, text="Tietoja meistä", padx=76, font=("Roboto", "14"))
+    tieto2.grid(row=2, column=0)
     tietojal = Label(tekstibox, text="Paina nappeja katsoaksesi informaatiota", padx=10, pady=10, font=("Roboto", "14"))
     tietojal.pack()
 
