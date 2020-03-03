@@ -54,6 +54,9 @@ def update():
         elif valinta1l[i] == "kuva1":
             kuval.config(image=kuvalista[1])
             i += 1
+        elif valinta1l[i] == "kuva2":
+            kuval.config(image=kuvalista[2])
+            i += 1
         teksti.configure(text=valinta1l[i])
         i += 1
 
@@ -66,6 +69,9 @@ def update():
         elif valinta2l[i] == "kuva1":
             kuval.config(image=kuvalista[1])
             i += 1
+        elif valinta2l[i] == "kuva2":
+            kuval.config(image=kuvalista[2])
+            i += 1
         teksti.configure(text=valinta2l[i])
         i += 1
 
@@ -77,6 +83,9 @@ def update():
             return
         elif valinta3l[i] == "kuva1":
             kuval.configure(image=kuvalista[1])
+            i += 1
+        elif valinta3l[i] == "kuva2":
+            kuval.config(image=kuvalista[2])
             i += 1
         teksti.configure(text=valinta3l[i])
         i += 1
@@ -92,18 +101,15 @@ def update():
 
 def valinta1():
     global valintanro
-    if vastattu == 0:
-        valintanro = 1
+    valintanro = 1
 
 def valinta2():
     global valintanro
-    if vastattu == 0:
-        valintanro = 2
+    valintanro = 2
 
 def valinta3():
     global valintanro
-    if vastattu == 0:
-        valintanro = 3
+    valintanro = 3
 
 
 intro = "Pimeänä ja kosteana tammikuun perjantai iltana olet menossa ostamaan kaljaa k-marketista rankan amispäivän jälkeen. \nMatkalla kuitenkin sattumanvaraisen rekkamiehen huomio herpaantuu ja hän ajaa päältäsi saabilla. \n "
@@ -130,6 +136,10 @@ t2_1 =  "Otat mukaan dynamiitiä eddessäsi luolaan menee kaksi kylän miestä t
 t2_12 = "egyptiin hakkaamaan kaksisataa vuotta vanhan englantilais vamppyyrin eli toisin sanottuna sitä ei pitäisi herättää.\n Onneksi se on syvässä unessa ja saatte herättämättä örkkiä asetettua dynamiitit paikoilleen jolloin\n ne räjähdyttyään tukkisivat tunnelin kokonaan kivillä. Asetatte kaikki dynamiitit pitkään sytytyslankaan jonka voitte\n"
 t2_13 = "sytyttää turvallisesti luolan suulta. Lähteässänne hiljaa uloskäyntiä päin mies kirveen kanssa kompastuu lepakkosoppakulhoon\n joka herättää örkin. Se nousee raivoissaan ylös ja salaman nopeasti juoksee soihtumiehen luokse jonka se läpsäyttää sinun viereiseen seinää päin kuin kärpäsen. Sinulla on nyt dileema\n"
 
+t2_2 = "Jäät luolan suulle miekka kädessä odottaen kylän miehiä jotka menivät luolaan dynamiitin kanssa. Odotat luolan suulla kunnes \nkuulet luolasta kovan kolauksen ja huudon jonka jälkeen luolasta juoksee ulos jääkaapin kokoinen \nörkki joka juoksee sinua päin heittäen sinut ilmaan ja ennen kuin huomaatkaan olet jo laskeutumassa ja osut maahan.\n"
+
+t2_3 = "Lähdet heti tilaisuuden tullessa juoksemaan mahdollisimman nopeasti pimeään metsään kunnes törmäät johonkin. Se ei ole puu \nvaan erittäin vihainen örkki joka reaktiona mosauttaa kallosi alkeellisella nuijalla."
+
 kuva_kmarket = ImageTk.PhotoImage(Image.open(str(dir_path) + "\\resurssit\\K-Market.jpg"))
 kuva_kirkko = ImageTk.PhotoImage(Image.open(str(dir_path) + "\\resurssit\\kirkko.jpg"))
 kuva_kylantalo = ImageTk.PhotoImage(Image.open(str(dir_path) + "\\resurssit\\kylantalo.jpg"))
@@ -146,12 +156,11 @@ kuval.grid(row=0,column=0)
 teksti = Label(tekstifraami, text=intro, bd=12, font=("Roboto", "14"))
 teksti.grid(row=0, column=0)
 
-tekstilista = [" "]
-tekstilista = [intro, kysymys1, t2, t21, t22, kysymys2]
+tekstilista = [intro, kysymys1, t2, t21, t22, kysymys2, "testi", "testi2", "testi3", "testi4", "testi5",]
 
-valinta1l = ["kuva1", t1_1, t1_12, t1_13, t1_14, "loppu", t2_1, t2_12,"loppu"]
-valinta2l = ["kuva1", t1_2, t1_21, t1_22, " ", "loppu", "seuraava valinta teksti 2"]
-valinta3l = ["kuva1", t1_3, t1_31, " ", " ", "loppu", "seuraava valinta teksti 3"]
+valinta1l = ["kuva1", t1_1, t1_12, t1_13, t1_14, "loppu", " ", " ", " ", " ", "kuva2", t2_1, t2_12, "loppu"]
+valinta2l = ["kuva1", t1_2, t1_21, t1_22, " ", "loppu", "kuva2", t2_2, "loppu"]
+valinta3l = ["kuva1", t1_3, t1_31, " ", " ", "loppu", "kuva2", t2_3, "loppu"]
 
 seuraava = Button(nappifraami, text="Seuraava", padx=10, command=update, font=("Roboto", "14"))
 seuraava.grid(row=0, column=0)
