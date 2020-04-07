@@ -9,7 +9,7 @@ Tarvitset:
  * Pillow ja pygame nimiset kirjastot
  * Python tulkin (3.8.X)
 
-Pelin tiedostot voit ladata joko zip tiedostona tai jos sinulla on git niin komennoilla:
+Pelin tiedostot voit ladata joko zip tiedostona tai jos sinulla on git niin komennoilla:\n
 "git clone https://github.com/luimu64/PROJEKTITYO" 
 ja
 "git checkout graafinenpohja"
