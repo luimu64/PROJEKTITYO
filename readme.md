@@ -1,5 +1,5 @@
 <h1>Ohjeet</h1>
-<h2>HUOM! Tämä on LEIMUN haara projektista<h2>
+<h2>HUOM! Tämä on LEIMUN haara projektista</h2>
 Normaalisti jos jotain python ohjelmia jaettaisiin ne pakattaisiin ajettaviksi ohjelmiksi, 
 mutta en saanut pakattua tätä puuttuvien piilo moduulien takia. Tästä johtuen asennu on hankalampi,
 mutta ohjelma toimii hieman paremmin.
